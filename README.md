@@ -58,3 +58,11 @@ $user = \DB::table('users')->insert([
             'password' => bcrypt('123456'),
         ]);
 ```
+### Show Pagination in laravel Entries
+```php
+<div class="dataTables_info" id="example1_info" role="status" aria-live="polite">
+          Showing {{($employee->currentpage()-1)*$employee->perpage()+1}} to {{$employee->currentpage()*$employee->perpage()}}
+    of  {{$employee->total()}} entries
+        </div>
+
+```
