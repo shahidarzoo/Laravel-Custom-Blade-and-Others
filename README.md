@@ -1,5 +1,29 @@
 # Laravel-Custom-Blade, Factroy and Seeds
 
+### Count Grater value and check if it is divisable by any no
+```
+$status_order = DB::table('shipments')
+	->select('shipment_status_id', DB::raw('count(shipment_status_id) as count_status_id'))
+	->groupBy('shipment_status_id')
+	->where('order_id', 500)
+	->get();
+$status = array();
+$max = 0;
+foreach ($status_order as $ship_status) 
+{
+	if ($ship_status->count_status_id > $max) 
+	{
+		$max = $ship_status->count_status_id;
+	}
+}
+
+
+if($max  % 2 == 0)
+{
+	echo "Accepted".'<br>';
+}
+
+```
 ##### Inside your App\Providers\AppServiceProvider.php replace boot mathod with following code
 ```php
 use Blade;
