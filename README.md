@@ -1,4 +1,4 @@
-# Laravel-Custom-Blade, Factroy and Seeds
+# Factroy, Seeds and Custom-Blade in Laravel 
 
 ### Count Grater value and check if it is divisable by any no
 ```
@@ -24,6 +24,7 @@ if($max  % 2 == 0)
 }
 
 ```
+# Laravel-Custom-Blade
 ##### Inside your App\Providers\AppServiceProvider.php replace boot mathod with following code
 ```php
 use Blade;
