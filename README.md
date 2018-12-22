@@ -1,4 +1,4 @@
-# Factroy, Seeds and Custom-Blade in Laravel 
+# Factroy, Seeds Custom-Blade and others Task 
 
 ### Count Grater value and check if it is divisable by any no
 ```
