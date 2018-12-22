@@ -75,7 +75,8 @@ $factory->define(App\Product::class, function (Faker $faker) {
 }
 ```
 ## Seeds
-#####  php artisan make:seeder UsersTableSeeder
+#####  php artisan make:seeder UsersTableSeeder and run 	
+php artisan db:seed --class=UsersTableSeeder
 ```php
 $user = \DB::table('users')->insert([
             'name' => 'Super Admin',
