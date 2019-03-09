@@ -1,5 +1,39 @@
 # Factroy, Seeds Custom-Blade and others Task 
 
+## Laravel Request
+```php
+
+ public function rules()
+    {
+        switch (request()->method()){
+            case 'POST' :
+                return [
+                    'about_image' => 'required|mimes:jpeg,png,jpg,gif,svg',
+                    'location' => 'required',
+                    'description' => 'required',
+                ];
+                break;
+            case 'PUT' :
+                return [
+                    'location' => 'required',
+                    'description' => 'required',
+                ];
+                break;
+            default :
+                return [];
+        }
+    }
+
+    public function messages()
+    {
+        return [
+            'about_image.required' => 'Select image',
+            'location.required' => 'Location is required',
+            'description.required' => 'Description is required',
+        ];
+    }
+
+```
 ### Count Grater value and check if it is divisable by any no
 ```
 $status_order = DB::table('shipments')
