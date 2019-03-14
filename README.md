@@ -58,7 +58,7 @@ if($max  % 2 == 0)
 }
 
 ```
-# Laravel-Custom-Blade
+# Laravel-Custom-Blade 
 ##### Inside your App\Providers\AppServiceProvider.php replace boot mathod with following code
 ```php
 use Blade;
